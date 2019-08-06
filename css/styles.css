@@ -1,71 +1,104 @@
-/* Typography */
-
-html {
-	font-family: 'Roboto', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 576px) {
-	html {
-		font-size: 14px;
-	}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #191919;
+  color: #fff;
+  font-size: 18px;
 }
 
-@media (min-width: 768px) {
-	html {
-		font-size: 16px;
-	}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*width: 800px;*/
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
-@media (min-width: 992px) {
-	html {
-		font-size: 18px;
-	}
+.intro {
+  font-family: 'Reem Kufi';
+  text-align: center;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.2em;
 }
 
-@media (min-width: 1200px) {
-	html {
-		font-size: 20px;
-	}
+.intro h1 {
+  font-size: 4.5em;
 }
 
-.icons-social i {
-	font-size: 3em;
+.svgs {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  flex-wrap: wrap;
 }
 
-/* Custom Styles */
-
-main {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	justify-content: center;
-	padding: 0 30px;
-	text-align: center;
+.svgs > li {
+	margin: 0.3em;
 }
 
-main > .intro {
-	font-family: 'Reem Kufi', sans-serif;
-	font-size: 3.75em;
-	font-weight: 600;
+.svgs > li img {
+	height: 2.4em;
 }
 
-main > .tagline {
-	font-size: 1.5rem;
-	margin: 1.5rem 0;
-	font-weight: 100;
+.strike {
+  text-decoration: line-through;
 }
 
-.icons-social i {
-	padding: 10px;
+.truth {
+  display: none;
+  font-size: 0.1em;
+  margin-top: -1.8em;
 }
 
-.devto {
-	margin-bottom: -0.20rem;
+.description a {
+  color: #fff;
 }
 
-.devto svg {
-	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
-	width: 2.65rem;
-	height: 2.65rem;
+.description a:hover {
+  text-transform: uppercase;
+}
+
+.description p {
+  text-align: center;
+  line-height: 1.4em;
+  letter-spacing: 0.08em;
+  /*align-self: flex-end;*/
+}
+
+/* Desktop */
+@media only screen and (min-width: 961px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 401px) and (max-width: 900px) {
+  .container {
+    width: 50%;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 400px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 1.5em;
+  }
+
+  .intro h1 {
+    font-size: 2.4em;
+  }
 }
