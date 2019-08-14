@@ -48,7 +48,7 @@ body {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100vw;
+  width: 256px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -76,31 +76,17 @@ body {
   text-transform: uppercase;
 }
 
-/* Wide Screens */
-@media only screen and (min-width: 1441px) {
-  .svgs {
-    width: 5vw;
-  }
-}
 
 /* Desktop */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .container {
     width: 1024px;
   }
-
-  .svgs {
-    width: 8vw;
-  }
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .container {
     width: 60vw;
-  }
-
-  .svgs {
-    width: 10vw;
   }
 }
 
@@ -114,10 +100,6 @@ body {
   .container {
     width: 70vw;;
   }
-
-  .svgs {
-    width: 15vw;
-  }
 }
 
 /* Mobile */
@@ -130,10 +112,6 @@ body {
   .container {
     padding: 1.5em;
     width: 350px;
-  }
-
-  .svgs {
-    width: 30vw;
   }
 
   .intro h1 {
