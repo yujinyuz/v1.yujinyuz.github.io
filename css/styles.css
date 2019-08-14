@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -12,11 +13,19 @@ body {
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*width: 800px;*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
   margin: 0 auto;
 }
@@ -34,18 +43,14 @@ body {
 
 .svgs {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  width: 300px;
-  flex-wrap: wrap;
-}
-
-.svgs > li {
-	margin: 0.3em;
-}
-
-.svgs > li img {
-	height: 2.4em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100vw;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .strike {
@@ -58,6 +63,11 @@ body {
   margin-top: -1.8em;
 }
 
+.description {
+  text-align: center;
+  max-width: 50vw;
+}
+
 .description a {
   color: #fff;
 }
@@ -66,36 +76,64 @@ body {
   text-transform: uppercase;
 }
 
-.description p {
-  text-align: center;
-  line-height: 1.4em;
-  letter-spacing: 0.08em;
-  /*align-self: flex-end;*/
+/* Wide Screens */
+@media only screen and (min-width: 1441px) {
+  .svgs {
+    width: 5vw;
+  }
 }
 
 /* Desktop */
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
   .container {
-    width: 960px;
+    width: 1024px;
+  }
+
+  .svgs {
+    width: 8vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .container {
+    width: 60vw;
+  }
+
+  .svgs {
+    width: 10vw;
   }
 }
 
 /* Tablet */
-@media only screen and (min-width: 401px) and (max-width: 900px) {
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+
+  body {
+    font-size: 24px;
+  }
+
   .container {
-    width: 50%;
+    width: 70vw;;
+  }
+
+  .svgs {
+    width: 15vw;
   }
 }
 
 /* Mobile */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 420px) {
 
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .container {
     padding: 1.5em;
+    width: 350px;
+  }
+
+  .svgs {
+    width: 30vw;
   }
 
   .intro h1 {
