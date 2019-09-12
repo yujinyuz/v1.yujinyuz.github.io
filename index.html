@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,58 +7,97 @@
   <title>@yujinyuz &mdash; Software Developer</title>
 
   <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Reem+Kufi|Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.ico" type="image/png">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109673795-2"></script>
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109673795-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-109673795-2');
-</script>
+</script> -->
 
 
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="logo-container">
+        <img src="images/mylogo.png">
+      </div>
 
-  <main class="container">
-    <header class="intro">
-      <h1>
-        Hi! I'm Yujin :)
-        <div class="truth" aria-hidden="true">but my real name is Eugene. It's just easier to spell 'Yujin'. If you're reading this, then you might be interested knowing more about me. My complete name is Eugene Essun V. Oliveros. But you can chat me by Eugene or Yujin.</div>
-      </h1>
-
-      <p>Developing web apps <span class="strike">for</span> with you.</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#arsenal">Arsenal</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="tech-stacks icons">
-      <ul>
-        <li><img src="images/python.svg" alt="Python"></li>
-        <li><img src="images/django.svg" alt="Django"></li>
-        <!-- <li><img src="images/ruby.svg" alt="Ruby"></li> -->
-        <!-- <li><img src="images/rails.svg" alt="Ruby on Rails"></li> -->
-        <li><img src="images/html.svg" alt="HTML"></li>
-        <li><img src="images/css.svg" alt="CSS"></li>
-        <li><img src="images/javascript.svg" alt="Javascript"></li>
-      </ul>
-    </div>
+    <main>
+      <section class="intro">
+        <h1>I'm Yujin!</h1>
+        <p class="tagline">Let's make web apps together</p>
 
-    <div class="description">
-      Developing web apps since 2017. Basically, I use Python and Django with the classic HTML + CSS combo and a little bit of Javascript. I would be glad to <a href="mailto:eevoliveros@gmail.com">work with you</a>.
-    </div>
-    
-    <div class="social icons">
-      <ul>
-        <li><a target="_blank" href="https://github.com/yujinyuz"><img src="images/github.svg" alt="Github"></a></li>
-        <li><a target="_blank" href="https://linkedin.com/in/yujinyuz"><img src="images/linkedin.svg" alt="LinkedIn"></a></li>
-        <li><a target="_blank" href="https://medium.com/@yujinyuz"><img src="images/medium.svg" alt="Medium"></a></li>
-        <li><a target="_blank" href="https://stackoverflow.com/story/yujinyuz"><img src="images/stackoverflow.svg" alt="StackOverFlow"></a></li>
-      </ul>
-    </div>
+        <div class="terminal-wrapper">
+          <div class="terminal-title">
+            <span class="close-btn"></span>
+            <span class="title"><span class="title-text">bash </span><span>&mdash; 80x25</span></span>
+          </div>
+          <div class="terminal-body">
+            <div id="my-content">
+              <p>ls languages/<br>HTML <br>CSS<br>Javascript<br>Python<br>Bash<br>$ ^1500clear
+              </p>
+              <p>So, basically I know: HTML</p>
+              <p>So, basically I know: CSS</p>
+              <p>So, basically I know: Javascript</p>
+              <p>So, basically I know: Python</p>
+              <p>So, basically I know: Bash^200</p>
+              <p>I'm looking for a job that I can utilize those skills.^400</p>
+              <p>Feel free to contact me!^400<p>
+  
+              <p>python get_contact_details.py^500 <br>Fetching contact details from server . . .^600<br>Success! Found (5)<br><br><i class="fas fa-at"></i> Email: <a href="mailto:eevoliveros@gmail.com">eevoliveros@gmail.com</a><br><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/yujinyuz/">https://linkedin.com/in/yujinyuz</a><br><i class="fab fa-github"></i> GitHub: <a href="https://github.com/yujinyuz">https://github.com/yujinyuz</a><br><i class="fab fa-twitter-square"></i> Twitter: <a href="https://twitter.com/_yujinyuz">https://twitter.com/_yujinyuz</a><br><i class="fas fa-hashtag"></i> UpWork: <a href="https://www.upwork.com/freelancers/~0136d7c146e4e4998a">https://www.upwork.com/yujinyuz</a><br><br><small>[Process completed]</small></p>
+            </div>
+            $
+            <span id="typedjs"></span>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <h1>About Me</h1>
+        <p>A passionate software developer with a demonstrated history working in web development.</p>
+      </section>
 
-  </main>
+      <section id="arsenal">
+        <h1>Arsenal</h1>
+        <p>HTML, CSS, Javascript, Python, Django, Bash, SQL, Web Scraping, Git</p>
+      </section>
+    </main>
+
+    <footer>
+      Copyright &copy;2019
+    </footer>
+  </div>
+
+  <script src="https://kit.fontawesome.com/08db533fbd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10"></script>
+  <script>
+    // var type = new Typed('#typejs', {
+    //   strings: ['python greet.py^1000\n `Hi, I\'m Yujin` ^1000\n `Fetching from source...`\n Tae Tae \n Tae tae\n Tae \n Tae \n Tae \n Tae'],
+    //   typeSpeed: 40,
+    //   onTypingPaused: function(pos, self) {
+    //     document.querySelector('span.title-text').innerHTML = 'greet.py &mdash; python ';
+    //   },
+    // });
+    var type = new Typed('#typedjs', {
+      stringsElement: '#my-content',
+      typeSpeed: 40,
+      onTypingPaused: function(pos, self) {
+      },
+    });
+  </script>
 </body>
 </html>
