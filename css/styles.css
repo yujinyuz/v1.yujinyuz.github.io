@@ -1,0 +1,156 @@
+:root {
+  --black: #191919;
+  --green: #06F91D;
+  --grey: #c9c9c9;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 12px;
+  color: var(--grey);
+  background: var(--black);
+  margin: 0 auto;
+  font-family: 'Source Code Pro', monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 12vh;
+}
+
+section {
+  margin: 20px;
+}
+
+section > h1 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.4em;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 8px;
+}
+
+.intro {
+  margin: 32px;
+  height: 88vh;
+}
+
+.intro p {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.terminal-wrapper {
+  width: 90vw;
+  height: 300px;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  color: var(--green);
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.2em;
+}
+
+.terminal-title {
+  color: var(--black);
+  background-color: #f8f8f8;
+  background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
+  border-bottom: 1px solid #c9c9c9;
+  text-align: center;
+  font-family: "Lucida Grande", sans-serif;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.title {
+  flex: 1;
+}
+
+.close-btn {
+  background: #FF0000 0% 0% no-repeat padding-box;
+  border: 1px solid #FF0000;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  left: 3px;
+}
+
+.terminal-body {
+  /* padding: 5px; */
+  padding-left: 8px;
+  padding-top: 5px;
+}
+
+#typedjs {
+  /* white-space: pre; */
+  /* white-space: pre-line; */
+  /* display: inline-block; */
+  white-space: pre-wrap;
+  padding-left: -5px;
+}
+
+#about p {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+    width: 968px;
+  }
+
+  .terminal-wrapper {
+    width: 40vw;
+  }
+}
