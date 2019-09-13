@@ -34,6 +34,8 @@ header {
 
 section {
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 section > h1 {
@@ -80,7 +82,6 @@ nav ul li {
 
 .intro {
   margin: 32px;
-  height: 88vh;
 }
 
 .intro p {
@@ -90,24 +91,23 @@ nav ul li {
 
 .terminal-wrapper {
   width: 90vw;
-  height: 300px;
+  min-height: 250px;
+  max-height: 298px;
   border: 1px solid #c9c9c9;
   border-radius: 5px;
   color: var(--green);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2em;
+  max-width: 500px;
 }
 
 .terminal-title {
   color: var(--black);
   background-color: #f8f8f8;
   background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid var(--grey);
   text-align: center;
   font-family: "Lucida Grande", sans-serif;
-
-  display: flex;
-  justify-content: space-between;
   position: relative;
 }
 
@@ -137,7 +137,11 @@ nav ul li {
   /* white-space: pre-line; */
   /* display: inline-block; */
   white-space: pre-wrap;
-  padding-left: -5px;
+  /* padding-left: -5px; */
+}
+
+#my-content {
+  display: none;
 }
 
 #about p {
@@ -147,10 +151,5 @@ nav ul li {
 @media only screen and (min-width: 768px) {
   body {
     font-size: 16px;
-    width: 968px;
-  }
-
-  .terminal-wrapper {
-    width: 40vw;
   }
 }
