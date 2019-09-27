@@ -21,6 +21,7 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#arsenal">Arsenal</a></li>
+          <li><a href="#contact" id="cc">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -47,16 +48,48 @@
               <p>I'm looking for an opportunity that I can utilize those skills.^400</p>
               <p>Feel free to contact me!^400<p>
   
-              <p>python get_contact_details.py^500 <br>Fetching contact details from server . . .^600<br>&lt;Response [200]&gt;<br><br><i class="fas fa-at"></i> Email: <a href="mailto:eevoliveros@gmail.com">eevoliveros@gmail.com</a><br><i class="fab fa-linkedin"></i> LinkedIn: <a target="_blank" href="https://linkedin.com/in/yujinyuz/">https://linkedin.com/in/yujinyuz</a><br><i class="fab fa-github"></i> GitHub: <a target="_blank" href="https://github.com/yujinyuz">https://github.com/yujinyuz</a><br><i class="fab fa-twitter-square"></i> Twitter: <a target="_blank" href="https://twitter.com/_yujinyuz">https://twitter.com/_yujinyuz</a><br><i class="fas fa-hashtag"></i> UpWork: <a target="_blank" href="https://www.upwork.com/freelancers/~0136d7c146e4e4998a">https://www.upwork.com/yujinyuz</a><br><br><small>[Process completed]</small></p>
+              <p id="contact">python get_contact_details.py^500 <br>Fetching contact details from server . . .^600<br>&lt;Response [200]&gt;<br><br><i class="fas fa-at"></i> Email: <a href="mailto:eevoliveros@gmail.com">eevoliveros@gmail.com</a><br><i class="fab fa-linkedin"></i> LinkedIn: <a target="_blank" href="https://linkedin.com/in/yujinyuz/">https://linkedin.com/in/yujinyuz</a><br><i class="fab fa-github"></i> GitHub: <a target="_blank" href="https://github.com/yujinyuz">https://github.com/yujinyuz</a><br><i class="fab fa-twitter-square"></i> Twitter: <a target="_blank" href="https://twitter.com/_yujinyuz">https://twitter.com/_yujinyuz</a><br><i class="fas fa-hashtag"></i> UpWork: <a target="_blank" href="https://www.upwork.com/freelancers/~0136d7c146e4e4998a">https://www.upwork.com/yujinyuz</a><br><br><small>[Process completed]</small></p>
+              
             </div>
-            $
+            $ 
             <span id="typedjs"></span>
+            <span id="default-contact-display"></span>
           </div>
         </div>
+        <i id="redo" class="fas fa-redo-alt"></i>
       </section>
       <section id="about">
         <h1>About Me</h1>
         <p>A passionate software developer with a demonstrated history working in web development.</p>
+      </section>
+
+      <section id="projects">
+        <h1>Projects</h1>
+        <div class="project-list">
+          <div class="project-item">
+            <div class="project__title">
+              Taskinator
+            </div>
+            <div class="project__description">
+              . . . . .
+            </div>
+            <div class="project__img">
+              . . . . .
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project__title">
+              Pomodoro
+            </div>
+            <div class="project__description">
+              . . . . .
+            </div>
+            <div class="project__img">
+              . . . . .
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="arsenal">
@@ -82,11 +115,33 @@
   <script src="https://kit.fontawesome.com/08db533fbd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.10"></script>
   <script>
-    var type = new Typed('#typedjs', {
-      stringsElement: '#my-content',
-      typeSpeed: 40,
-      onTypingPaused: function(pos, self) {
-      },
+    let type = null;
+    const contact = document.querySelector('#cc');
+    const redo = document.querySelector('#redo');
+    const default_contact = document.querySelector('#default-contact-display');
+    const contact_details = document.querySelector('#contact').innerHTML;
+    const setContact = () => {
+      default_contact.innerHTML = contact_details.replace(new RegExp(/\^(\d+)/g), "");
+      default_contact.style.display = 'inline';
+      redo.style.visibility = 'visible';
+    };
+    setContact();
+
+    redo.addEventListener('click', (e) => {
+      default_contact.style.display = 'none';
+      redo.style.visibility = 'hidden';
+      type = new Typed('#typedjs', {
+        stringsElement: '#my-content',
+        typeSpeed: 40,
+        onComplete: function(self) { redo.style.visibility = 'visible' },
+      });
+    });
+
+    contact.addEventListener('click', () => {
+      if(type) {
+        type.destroy();
+      }
+      setContact();
     });
   </script>
 </body>

@@ -1,18 +1,20 @@
 :root {
   --black: #191919;
-  --green: #06F91D;
+  --green: #06f91d;
   --grey: #c9c9c9;
 }
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
@@ -95,7 +97,7 @@ nav ul li {
   max-height: 298px;
   border-radius: 5px;
   color: var(--green);
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 1.2em;
   max-width: 500px;
   overflow: hidden;
@@ -107,7 +109,7 @@ nav ul li {
   background-image: -webkit-linear-gradient(top, #e8e8e8, #bcbbbc);
   border-bottom: 1px solid var(--grey);
   text-align: center;
-  font-family: "Lucida Grande", sans-serif;
+  font-family: 'Lucida Grande', sans-serif;
   position: relative;
 }
 
@@ -116,8 +118,8 @@ nav ul li {
 }
 
 .close-btn {
-  background: #FF0000 0% 0% no-repeat padding-box;
-  border: 1px solid #FF0000;
+  background: #ff0000 0% 0% no-repeat padding-box;
+  border: 1px solid #ff0000;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -139,6 +141,23 @@ nav ul li {
   padding-top: 5px;
 }
 
+.project-list {
+  display: flex;
+}
+
+.project-item {
+  margin-right: 10px;
+}
+
+#redo {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#redo:hover {
+  cursor: pointer;
+}
+
 #typedjs {
   /* white-space: pre; */
   /* white-space: pre-line; */
@@ -158,5 +177,9 @@ nav ul li {
 @media only screen and (min-width: 768px) {
   body {
     font-size: 16px;
+  }
+
+  .terminal-wrapper {
+    min-height: 271px;
   }
 }
